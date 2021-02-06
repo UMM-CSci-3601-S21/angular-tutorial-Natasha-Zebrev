@@ -1,1 +1,66 @@
 <h2>Products</h2>
+
+
+<div *ngFor="let product of products">
+
+  <h3>
+    <a [title]="product.name + ' details'">
+      Phone XL
+    </a>
+</h3>
+
+<p *ngIf="product.description">
+  Description: A large phone with one
+  of the best screens.
+</p>
+
+
+<button (click)="share()">
+  Share
+</button>
+
+<app-product-alerts
+  [product]="product"
+  (notify)="onNotify()">
+</app-product-alerts>
+
+<h3>
+  <a [title]="product.name + ' details'">
+    Phone Mini
+  </a>
+</h3>
+
+<p *ngIf="product.description">
+  Description: A great phone with one of
+  the best cameras.
+</p>
+
+<button (click)="share()">
+  Share
+</button>
+
+<app-product-alerts
+  [product]="product"
+  (notify)="onNotify()">
+</app-product-alerts>
+
+ <h3>
+    <a [title]="product.name + ' details'">
+      Phone Standard
+    </a>
+</h3>
+
+<p *ngIf="product.description">
+  Description: The classic.
+</p>
+
+<button (click)="share()">
+  Share
+</button>
+
+<app-product-alerts
+  [product]="product"
+  (notify)="onNotify()">
+</app-product-alerts>
+
+</div>
