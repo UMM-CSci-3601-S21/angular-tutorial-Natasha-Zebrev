@@ -4,7 +4,8 @@
 <div *ngFor="let product of products">
 
   <h3>
-    <a [title]="product.name + ' details'">
+    <a [title]="product.name + ' details'" [routerLink]=
+    "['/products', product.id]">
       Phone XL
     </a>
 </h3>
@@ -27,10 +28,13 @@
 </app-product-alerts>
 
 <h3>
-  <a [title]="product.name + ' details'">
+  <a [title]="product.name + ' details'" [routerLink]
+  ="['/products', product.id]">
     Phone Mini
   </a>
 </h3>
+
+<!-- . . . -->
 
 <p *ngIf="product.description">
   Description: A great phone with one of
@@ -47,10 +51,13 @@
 </app-product-alerts>
 
  <h3>
-    <a [title]="product.name + ' details'">
+  <a [title]="product.name + ' details'" [routerLink]
+  ="['/products', product.id]">
       Phone Standard
     </a>
 </h3>
+
+<!-- . . . -->
 
 <p *ngIf="product.description">
   Description: The classic phone.
