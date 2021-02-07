@@ -7,6 +7,8 @@
   <p>Description: A large phone with one
     of the best screens.</p>
 
+    <button (click)="addToCart(product)">Buy</button>
+
 </div>
 
 <div *ngIf="product">
@@ -15,11 +17,15 @@
   <p>Description: A great phone with one of
     the best cameras.</p>
 
+    <button (click)="addToCart(product)">Buy</button>
+
 </div>
 
 <div *ngIf="product">
   <h3>Phone Standard</h3>
   <h4>$699.00</h4>
   <p>Description: The classic phone.</p>
+
+  <button (click)="addToCart(product)">Buy</button>
 
 </div>
