@@ -11,7 +11,9 @@ import { products } from '../products';
 export class ProductDetailsComponent implements OnInit {
 
   product;
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit(): void {
   }
