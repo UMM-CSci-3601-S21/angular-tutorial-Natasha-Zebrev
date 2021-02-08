@@ -14,7 +14,7 @@ export class CartService {
     private http: HttpClient
   ) { }
 
-  addToCart(product) {
+  addToCart(product): void {
     this.items.push(product);
   }
 
